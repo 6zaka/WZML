@@ -42,3 +42,4 @@ urllib3
 xattr
 waybackpy
 playwright
+uvloop
