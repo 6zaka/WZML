@@ -656,16 +656,16 @@ FINISHED_PROGRESS_STR = environ.get('FINISHED_PROGRESS_STR', '')
 UN_FINISHED_PROGRESS_STR = environ.get('UN_FINISHED_PROGRESS_STR', '')
 MULTI_WORKING_PROGRESS_STR = environ.get('MULTI_WORKING_PROGRESS_STR', '')
 if len(FINISHED_PROGRESS_STR) == 0 or len(FINISHED_PROGRESS_STR) == 0 or len(MULTI_WORKING_PROGRESS_STR) == 0:
-    FINISHED_PROGRESS_STR = '█'  # '■'
-    UN_FINISHED_PROGRESS_STR = '▒'  # '□'
-    MULTI_WORKING_PROGRESS_STR = '▁ ▂ ▃ ▄ ▅ ▆ ▇'
+    FINISHED_PROGRESS_STR = '✪'  # '■'
+    UN_FINISHED_PROGRESS_STR = '✫'  # '□'
+    MULTI_WORKING_PROGRESS_STR = '✫ ✫ ✫ ✫ ✫ ✫ ✫
 MULTI_WORKING_PROGRESS_STR = (MULTI_WORKING_PROGRESS_STR.replace("'", '').replace(
     '"', '').replace('[', '').replace(']', '').replace(",", "")).split(' ')
 
 if len(MULTI_WORKING_PROGRESS_STR) != 7:
     LOGGER.warning(
         "Multi Progress doesn't contain 7 Symbols. Check Agian, Using Default for Now !")
-    MULTI_WORKING_PROGRESS_STR = '▁ ▂ ▃ ▄ ▅ ▆ ▇'.split(' ')
+    MULTI_WORKING_PROGRESS_STR = '✫ ✫ ✫ ✫ ✫ ✫ ✫'.split(' ')
 
 IMAGE_URL = environ.get('IMAGE_URL', '')
 if len(IMAGE_URL) == 0:
@@ -673,7 +673,7 @@ if len(IMAGE_URL) == 0:
 
 TIMEZONE = environ.get('TIMEZONE', '')
 if len(TIMEZONE) == 0:
-    TIMEZONE = 'Asia/Kolkata'
+    TIMEZONE = 'Asia/Ho_Chi_Minh'
 
 PIXABAY_API_KEY = environ.get('PIXABAY_API_KEY', '')
 if len(PIXABAY_API_KEY) == 0:
